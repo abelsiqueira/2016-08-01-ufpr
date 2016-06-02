@@ -6,10 +6,10 @@ address: "LAMIND (PC13) - Centro Politécnico, Curitiba/PR"      # street addres
 country: "Brazil"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "pt"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "-25.450877,-49.231512"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "01-05 de Agosto, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "13h30 - 17h30"    # human-readable time (e.g., "9:00 am - 4:30 pm")
+humandate: "01-03 de Agosto, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "9h00 - 17h30"    # human-readable time (e.g., "9:00 am - 4:30 pm")
 startdate: 2016-08-01      # use YYYY-MM-DD format like 2015-01-01
-enddate: 2016-08-05        # use YYYY-MM-DD format like 2015-01-02
+enddate: 2016-08-03        # use YYYY-MM-DD format like 2015-01-02
 instructor: ["Abel Soares Siqueira", "Fernando de Pol Mayer", "Kally Chung"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: [""]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: "abelsiqueira@ufpr.br"      # contact email address for workshop organizer, such as "grace@hopper.org"
@@ -49,13 +49,8 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template.  Use it to create your own website.
-Delete this line and email the link to your workshop page to admin@software-carpentry.org.
-If this is a self organized workshop, please be sure to include any other details
-Software Carpentry staff may need to know in your email.</h4>
 
-
-<h2 id="general">General Information</h2>
+<h2 id="general">Informações gerais</h2>
 
 <!--
   INTRODUCTION
@@ -63,20 +58,24 @@ Software Carpentry staff may need to know in your email.</h4>
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 -->
-<p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
-  is to help scientists and engineers get more research done in less
-  time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
-  help one another and to apply what they have learned to their own
-  research problems.
+<p> Objetivo da oficina
+Esta oficina tem o objetivo de introduzir algumas ferramentas para pesquisadores
+da área de exatas que podem ajudar no desenvolvimento de sua pesquisa de um modo
+geral.
+Esta oficina segue o modelo das oficinas propostas pelas organizações
+internacionais
+<a href="{{site.swc_site}}">Software Carpentry</a>
+e
+<a href="https://datacarpentry.org">Data Carpentry</a>,
+responsáveis pela realização de dezenas de oficinas deste tipo em diversas
+cidades ao redor do mundo.
+O ganho para o participante é imediato, principalmente se sua pesquisa envolve o
+uso de computador para realização de tarefas repetitivas ou análise de dados.
 </p>
 <p align="center">
   <em>
-    For more information on what we teach and why,
-    please see our paper
+    Para mais informações sobre as motivações do Software Carpentry, veja o
+    artigo
     "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
   </em>
 </p>
@@ -88,10 +87,11 @@ Software Carpentry staff may need to know in your email.</h4>
   workshop is only open to people from a particular institution.
 -->
 <p id="who">
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  <strong>Quem:</strong>
+  O curso é direcionado a professores, pesquisadores e alunos de pós-graduação,
+  ou de graduação avançados.
+  <strong>Não é necessário nenhum conhecimento prévio sobre os softwares para
+    participar.</strong>
 </p>
 
 <!--
@@ -104,11 +104,11 @@ Software Carpentry staff may need to know in your email.</h4>
 -->
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>One:</strong>
   {{page.address}}.
-  Get directions with
+  Veja o mapa com
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
+  ou
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
@@ -119,11 +119,12 @@ Software Carpentry staff may need to know in your email.</h4>
   Modify the block below if there are any special requirements.
 -->
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating sytem (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Software Carpentry's
+  <strong>Requerimentos:</strong>
+  Não é necessário levar computador para participar, pois teremos tudo instalado
+  nos laboratórios. No entanto, aqueles que quiserem usar o próprio notebook
+  devem instalar os softwares específicos <strong>antes</strong> do início do
+  workshop.
+  Também é necessário seguir o código de conduta do Software Carpentry:
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
 </p>
 
@@ -133,27 +134,6 @@ Software Carpentry staff may need to know in your email.</h4>
   Modify the block below if there are any barriers to accessibility or
   special instructions.
 -->
-<p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organisers have checked that:
-</p>
-<ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
-</ul>
-<p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>get in touch</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>get in touch</a>
-  {% endif %}
-  and we will attempt to provide them. 
-</p>
 
 <!--
   CONTACT EMAIL ADDRESS
@@ -163,14 +143,13 @@ Software Carpentry staff may need to know in your email.</h4>
   used.
 -->
 <p id="contact">
-  <strong>Contact</strong>:
-  Please mail
+  <strong>Contato</strong>:
+  Para mais informações, entre em contato pelo e-mail
   {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>.
   {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>.
   {% endif %}
-  for more information.
 </p>
 
 <hr/>
@@ -182,35 +161,53 @@ Software Carpentry staff may need to know in your email.</h4>
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">Cronograma</h2>
 
 <!-- DO NOT EDIT SURVEY LINKS -->
 <p><em>Surveys</em></p>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
+<p> Por favor, faça os pequenos surveys a seguir.
+</p>
 <p><a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a></p>
 <p><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></p>
 
+O cronograma abaixo é preliminar, e pode sofrer alterações.
+Avisaremos no início da oficina o calendário final.
+
 <div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
+  <div class="col-md-4">
+    <h3>Segunda</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00</td>  <td>Abertura</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>Shell</td> </tr>
+      <tr> <td>12:30</td>  <td>Almoço</td> </tr>
+      <tr> <td>14:00</td>  <td>Julia - parte 1</td> </tr>
+      <tr> <td>15:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>16:00</td>  <td>R - parte 1</td> </tr>
     </table>
   </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
+  <div class="col-md-4">
+    <h3>Terça</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00</td>  <td>Git - parte 1</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>RMarkdown</td> </tr>
+      <tr> <td>12:30</td>  <td>Almoço</td> </tr>
+      <tr> <td>14:00</td>  <td>LaTeX - parte 1</td> </tr>
+      <tr> <td>15:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>16:00</td>  <td>LaTeX - parte 2</td> </tr>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <h3>Quarta</h3>
+    <table class="table table-striped">
+      <tr> <td>09:00</td>  <td>Git - parte 2</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>11:00</td>  <td>Julia - parte 2</td> </tr>
+      <tr> <td>12:30</td>  <td>Almoço</td> </tr>
+      <tr> <td>14:00</td>  <td>R - parte 2</td> </tr>
+      <tr> <td>15:30</td>  <td>Coffee break</td> </tr>
+      <tr> <td>16:00</td>  <td>Fechamento</td> </tr>
     </table>
   </div>
 </div>
@@ -233,7 +230,8 @@ Software Carpentry staff may need to know in your email.</h4>
 <p id="etherpad">
   <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
   <br/>
-  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+  Usaremos este Etherpad para conversar, fazer anotações e compartilhar URLs e
+  códigos durantes a oficina.
 </p>
 {% endif %}
 
@@ -271,6 +269,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
+  <!--
   <div class="col-md-6">
     <h3 id="syllabus-python">Programming in Python</h3>
     <ul>
@@ -284,7 +283,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/python-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
-  <!--
+  -->
   <div class="col-md-6">
     <h3 id="syllabus-r">Programming in R</h3>
     <ul>
@@ -296,7 +295,6 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/r-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
-  -->
   <!--
   <div class="col-md-6">
     <h3 id="syllabus-matlab">Programming in MATLAB</h3>
@@ -328,17 +326,21 @@ Software Carpentry staff may need to know in your email.</h4>
     </ul>
   </div>
   <div class="col-md-6">
-    <h3 id="syllabus-sql">Managing Data with SQL</h3>
+    <h3 id="syllabus-julia">Julia</h3>
     <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
+      <li> Coisas </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h3 id="syllabus-latex">LaTeX</h3>
+    <ul>
+      <li> Coisas </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h3 id="syllabus-RMarkdown">RMarkdown</h3>
+    <ul>
+      <li> Coisas </li>
     </ul>
   </div>
 </div>
@@ -357,7 +359,9 @@ Software Carpentry staff may need to know in your email.</h4>
   'tools/check' as well.
 -->
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Instalações</h2>
+
+<strong>Em construção</strong>
 
 <p>
   To participate in a Software Carpentry workshop, you will need
@@ -697,43 +701,6 @@ Software Carpentry staff may need to know in your email.</h4>
     </div>
   </div>
 </div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_github}}/windows-installer">Software Carpentry Windows Installer</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">Mac OS X</h4>
-      <p>
-        SQLite comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
-</div> <!-- End of 'SQLite' section. -->
 
 <!--
   Uncomment this section if you are using our virtual machine.
