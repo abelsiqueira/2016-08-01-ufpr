@@ -258,14 +258,14 @@ Avisaremos no início da oficina o calendário final.
 
 <div class="row">
   <div class="col-md-6">
-    <h3 id="syllabus-shell">The Unix Shell</h3>
+    <h3 id="syllabus-shell">O Shell Unix</h3>
     <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
+      <li>Arquivos e diretórios</li>
+      <li>Histórico de comandos e complementação com tab</li>
+      <li>Redirecionamento e pipes</li>
+      <li>Looping sobre arquivos</li>
+      <li>Criando e executando scripts shell</li>
+      <li>Achando coisas</li>
       <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
@@ -287,11 +287,11 @@ Avisaremos no início da oficina o calendário final.
   <div class="col-md-6">
     <h3 id="syllabus-r">Programming in R</h3>
     <ul>
-      <li>Working with vectors and data frames</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Using R from the command line</li>
+      <li>Trabalhando com vetores e data frames</li>
+      <li>Lendo e visualizando dados</li>
+      <li>Criando e usando funções</li>
+      <li>Estruturas de repetição e condicionais</li>
+      <li>Usando o R a partir da linha de comando</li>
       <li><a href="{{site.swc_githubio}}/r-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
@@ -314,14 +314,14 @@ Avisaremos no início da oficina o calendário final.
   <div class="col-md-6">
     <h3 id="syllabus-git">Version Control with Git</h3>
     <ul>
-      <li>Creating a repository</li>
-      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
-      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
+      <li>Criando um repositório</li>
+      <li>Gravando mudanças em arquivos: <code>add</code>, <code>commit</code>, ...</li>
+      <li>Visualizando mudanças: <code>status</code>, <code>diff</code>, ...</li>
+      <li>Ignorando arquivos</li>
+      <li>Trabalhando na web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
+      <li>Resolvendo conflitos</li>
+      <li>Licensas abertas</li>
+      <li>Onde hospedar códigos, e porque</li>
       <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
@@ -340,7 +340,10 @@ Avisaremos no início da oficina o calendário final.
   <div class="col-md-6">
     <h3 id="syllabus-RMarkdown">RMarkdown</h3>
     <ul>
-      <li> Coisas </li>
+      <li>Markdown</li>
+      <li>Pandoc</li>
+      <li>knitr</li>
+      <li>Documentos dinâmicos com R e Markdown</li>
     </ul>
   </div>
 </div>
@@ -364,22 +367,25 @@ Avisaremos no início da oficina o calendário final.
 <strong>Em construção</strong>
 
 <p>
-  To participate in a Software Carpentry workshop, you will need
-  access to the software described below. In addition, you will
-  need an up-to-date web browser.
+  Para participar de um workshop Software Carpentry, você precisa ter
+  acesso aos softwares descritos abaixo. Além disso, você precisará de
+  um browser atualizado.
 </p>
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  Nós mantemos uma lista de problemas comuns que podem ocorrer durante a
+  instalação, como uma referência para instrutores, e que pode ser
+  encontrada na
+  <a href =
+  "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Página
+  de problemas de configuração e soluções</a> (em inglês).
 </p>
 
 <div id="shell"> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
+  <h3>O Shel Bash</h3>
 
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
+    O Bash é um shell muito utilizado, e que oferece o poder de realizar
+    tarefas simples rapidamente.
   </p>
 
   <div class="row">
@@ -387,71 +393,74 @@ Avisaremos no início da oficina o calendário final.
       <h4 id="shell-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
+        <li>Download do instalador do <a href="https://git-for-windows.github.io/">Git para Windows</a>.</li>
+        <li>Rode o instalador e siga os passos abaixo:
           <ol>
             <!-- Git 2.6.1 Setup -->
             <!-- Welcome to the Git Setup Wizard -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Information -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Select Destination Location -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Select Components -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Select Start Menu Folder -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Adjusting your PATH environment -->
             <li>
               <strong>
-                Select "Use Git from the Windows Command Prompt" and click on "Next".
+                Selecione "Use Git from the Windows Command Prompt" e clique "Next".
               </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
+              Se você esquecer dessa etapa, os programas necessários
+              para o workshop não irão funcionar. Se isso acontecer,
+              rode novamente o instalador e selecione a opção apropriada.
             </li>
             <!-- Configuring the line ending conversions -->
             <li>
-              Click on "Next".
+              Clique "Next".
               <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected.
+                Mantenha "Checkout Windows-style, commit Unix-style line endings" selecionado.
               </strong>
             </li>
             <!-- Configuring the terminal emulator to use with Git Bash -->
             <li>
               <strong>
-                Select "Use Windows' default console window" and click on "Next".
+                Selecione "Use Windows' default console window" e clique "Next".
               </strong>
             </li>
             <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Next".</li>
+            <li>Clique "Next".</li>
             <!-- Installing -->
             <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
+            <li>Clique em "Finish".</li>
           </ol>
         </li>
       </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+      <p>
+        Estes passos irão fornecer tanto o Git quanto o Bash no programa
+        Git Bash.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">Mac OS X</h4>
       <p>
-        The default shell in all versions of Mac OS X is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
-        <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
-        You may want to keep
-        Terminal in your dock for this workshop.
+        O shell padrão em todas as versões do Mac OS X é o Bash, então
+        não é necessário fazer a instalação. Você acessa o Bash a partir
+        do Terminal (encontrado
+        em <code>/Applications/Utilities</code>). Veja
+        o <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video
+        tutorial</a> da instalação do Git para um exemplo de como abrir
+        o Terminal. Você pode manter o Terminal no seu dock para este
+        workshop.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
-        install anything.
+        O shell padrão geralmente é o Bash, mas se sua máquina possuir
+        uma configuração diferente, você pode rodá-lo abrindo um
+        terminal e digitando <code>bash</code>. Não há necessidade de
+        instalação.
       </p>
     </div>
   </div>
@@ -461,60 +470,65 @@ Avisaremos no início da oficina o calendário final.
            is given at https://help.github.com/articles/supported-browsers/-->
   <h3>Git</h3>
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    Git é um sistema de controle de versão que permite rastrear quem fez
+    modificações, aonde elas foram feitas e quando. Também possui opções
+    para facilmente compartilhar uma versão pública do seu código
+    no <a href="https://github.com/">github.com</a>. Você precisará de
+    um
+    browser <a href="https://help.github.com/articles/supported-browsers/">suportado</a>
+    (atualmente Chrome, Firefox ou Safari, ou Internet Explorer 9 ou
+    acima).
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+        Git deve estar instalado no seu computador como parte da
+        instalação do Bash (descrito acima).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">Mac OS X</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+        <strong>Para OS X 10.9 e superior</strong>, instale Git para Mac
+        baixando e rodando a versão mais recente do instalador
+        "mavericks" a
+        partir <a href="http://sourceforge.net/projects/git-osx-installer/files/">desta
+        lista</a>. Após instalar o Git, não haverá nada no seu
+        folder <code>/Applications</code>, pois o Git é um programa de
+        linha de comando.
+        <strong>Para versões mais antigas do OS X (10.5-10.8)</strong>
+        use o instalador mais recente denominado "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">disponível aqui</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        If Git is not already available on your machine you can try to
-        install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo yum install git</code>.
+        Se o Git ainda não estiver disponível em sua máquina, você pode
+        tentar instalar através do gerenciado de pacotes da sua
+        distribuição. Por exemplo, para Debian/Ubuntu rode <code>sudo
+        apt-get install git</code> e para Fedora rode <code>sudo yum
+        install git</code>.
       </p>
     </div>
   </div>
 </div> <!-- End of 'Git' section. -->
 
 <div id="editor"> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
+  <h3>Editor de Texto</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
+    Quando você está escrevendo código, é importante usar um editor de
+    texto que seja otimizado para escrever código, com características
+    como coloração automática de palavras-chave. O editor de texto
+    padrão no Mac OS X e Linux geralmente é o Vim, que não é famoso por
+    ser intuitivo. Se você acidentalmente se encontrar preso nele, tente
+    digitar a tecla Esc, seguido de <code>:q!</code> (dois pontos, 'q'
+    minusculo, ponto de exclamação), depois aperte Enter para retornar
+    ao Shell.
   </p>
 
   <div class="row">
