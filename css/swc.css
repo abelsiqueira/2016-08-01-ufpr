@@ -827,3 +827,14 @@ div.chapter h2 {
         margin: 0px 0px;
     }
 }
+
+.instrutor img {
+  float: left;
+  width: 128px;
+  height: 128px;
+  margin: 10px;
+}
+
+.instrutor p {
+  text-align: justify;
+}
