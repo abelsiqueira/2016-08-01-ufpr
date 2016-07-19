@@ -1,25 +1,23 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-root: .               # DON'T CHANGE THIS.
+carpentry: "swc"    # what kind of Carpentry (must be either "dc" or "swc")
 venue: "Universidade Federal do Paraná"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "LAMIND (PC13) - Centro Politécnico, Curitiba/PR"      # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
-country: "br"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "pt"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+address: "LAMIND (PC13) - Centro Politécnico, Curitiba/PR"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "br"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "pt"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "-25.450877,-49.231512"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "01-03 de Agosto, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "9h00 - 17h30"    # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: 2016-08-01      # use YYYY-MM-DD format like 2015-01-01
-enddate: 2016-08-03        # use YYYY-MM-DD format like 2015-01-02
-instructor: ["Abel Soares Siqueira", "Fernando de Pol Mayer", "Kally Chung"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: [""]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "abelsiqueira@ufpr.br"      # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad:         # optional (insert the URL for your Etherpad if you're using one)
+humandate: "01-03 de Agosto, 2016"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9h00 - 17h30"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2016-08-01      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2016-08-03        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Abel Soares Siqueira", "Fernando de Pol Mayer", "Kally Chung"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: [""]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "abelsiqueira@ufpr.br"      # contact email address for host, lead instructor, or whoever else is handling questions
+etherpad:             # optional: URL for the workshop Etherpad if there is one
+eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
-
 <!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
-
-
 
 <!--
   HEADER
@@ -57,24 +55,20 @@ etherpad:         # optional (insert the URL for your Etherpad if you're using o
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 -->
-<p> Objetivo da oficina
-Esta oficina tem o objetivo de introduzir algumas ferramentas para pesquisadores
-da área de exatas que podem ajudar no desenvolvimento de sua pesquisa de um modo
-geral.
-Esta oficina segue o modelo das oficinas propostas pelas organizações
-internacionais
-<a href="{{site.swc_site}}">Software Carpentry</a>
-e
-<a href="https://datacarpentry.org">Data Carpentry</a>,
-responsáveis pela realização de dezenas de oficinas deste tipo em diversas
-cidades ao redor do mundo.
-O ganho para o participante é imediato, principalmente se sua pesquisa envolve o
-uso de computador para realização de tarefas repetitivas ou análise de dados.
+<p>
+  A missão da <a href="//software-carpentry.org">Software Carpentry</a>
+  é ajudar cientistas e engenheiros a serem mais produtivos com menos sofrimento
+  ao ensinar práticas laboratoriais para computação científica.
+  Esse workshop prático irá cobrir
+  conceitos e ferramentas, incluindo design de programas, controle de versão,
+  gerenciamento de dados e automação de tarefas.
+  Participantes são encorajados a se ajudarem
+  e aplicarem o que eles aprenderem em suas próprias pesquisas.
 </p>
 <p align="center">
   <em>
-    Para mais informações sobre as motivações do Software Carpentry, veja o
-    artigo
+    Para mais informações sobre o que ensinamos e porque,
+    leia nosso artigo
     "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
   </em>
 </p>
@@ -87,10 +81,9 @@ uso de computador para realização de tarefas repetitivas ou análise de dados.
 -->
 <p id="who">
   <strong>Quem:</strong>
-  O curso é direcionado a professores, pesquisadores e alunos de pós-graduação,
-  ou de graduação avançados.
-  <strong>Não é necessário nenhum conhecimento prévio sobre os softwares para
-    participar.</strong>
+  Este curso é destinado alunos de graduação, pós-graduação e outros pesquisadores.
+  <strong>Você não precisa ter nenhum conhecimento prévio das ferramentas que
+      serão apresentadas nesse workshop.</strong>
 </p>
 
 <!--
@@ -103,9 +96,9 @@ uso de computador para realização de tarefas repetitivas ou análise de dados.
 -->
 {% if page.latlng %}
 <p id="where">
-  <strong>One:</strong>
+  <strong>Onde:</strong>
   {{page.address}}.
-  Veja o mapa com
+  Obtenha direções em
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
   ou
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
@@ -137,9 +130,7 @@ uso de computador para realização de tarefas repetitivas ou análise de dados.
 <!--
   CONTACT EMAIL ADDRESS
 
-  Display the contact email address set in the header.  If an address
-  isn't set in the header, the Software Carpentry admin address is
-  used.
+  Display the contact email address set in the configuration file.
 -->
 <p id="contact">
   <strong>Contato</strong>:
@@ -275,8 +266,8 @@ Avisaremos no início da oficina o calendário final.
 <p id="etherpad">
   <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
   <br/>
-  Usaremos este Etherpad para conversar, fazer anotações e compartilhar URLs e
-  códigos durantes a oficina.
+  Iremos utilizar o Etherpad listado acima para chat,
+  anotações e compartilhamento de links e pequenos pedaços de código.
 </p>
 {% endif %}
 
@@ -299,7 +290,7 @@ Avisaremos no início da oficina o calendário final.
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="syllabus">Resumo</h2>
 
 <div class="row">
   <div class="col-md-6">
@@ -414,74 +405,86 @@ Avisaremos no início da oficina o calendário final.
       <h4 id="shell-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
-        <li>Download do instalador do <a href="https://git-for-windows.github.io/">Git para Windows</a>.</li>
-        <li>Rode o instalador e siga os passos abaixo:
+        <li>Baixe <a href="https://git-for-windows.github.io/">o instalador</a> do Git para Windows.</li>
+        <li>Execute o instalador e siga os passos abaixo:
           <ol>
             <!-- Git 2.6.1 Setup -->
             <!-- Welcome to the Git Setup Wizard -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Information -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Select Destination Location -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Select Components -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Select Start Menu Folder -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Adjusting your PATH environment -->
             <li>
               <strong>
-                Selecione "Use Git from the Windows Command Prompt" e clique "Next".
+                Selecione "Usar Git pela Prompt de Comando do Windows" e
+                selecione "Avançar".
               </strong>
-              Se você esquecer dessa etapa, os programas necessários
-              para o workshop não irão funcionar. Se isso acontecer,
-              rode novamente o instalador e selecione a opção apropriada.
+                Se você esquecer desse passo alguns programas que você utilizará
+                no workshop não funcionaram corretamente. Se isso acontecer
+                execute o instalador novamente e selecione a opção apropriada.
             </li>
             <!-- Configuring the line ending conversions -->
             <li>
-              Clique "Next".
+              Selecione "Avançar".
               <strong>
-                Mantenha "Checkout Windows-style, commit Unix-style line endings" selecionado.
+                Mantenha "Checkout Windows-style, commit Unix-style line
+                endings" selecionado.
               </strong>
             </li>
             <!-- Configuring the terminal emulator to use with Git Bash -->
             <li>
               <strong>
-                Selecione "Use Windows' default console window" e clique "Next".
+                Selecione "Use Windows' default console window" e selecione
+                "Avançar".
               </strong>
             </li>
             <!-- Configuring experimental performance tweaks -->
-            <li>Clique "Next".</li>
+            <li>Selecione "Avançar".</li>
             <!-- Installing -->
             <!-- Completing the Git Setup Wizard -->
-            <li>Clique em "Finish".</li>
+            <li>Selecione "Encerrar".</li>
+          </ol>
+        </li>
+        <li>
+          If your "HOME" environment variable is not set (or you don't know what this is):
+          <ol>
+            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
+            <li>
+              Type the following line into the command prompt window exactly as shown:
+              <p><code>setx HOME "%USERPROFILE%"</code></p>
+            </li>
+            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
+            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
           </ol>
         </li>
       </ol>
-      <p>
-        Estes passos irão fornecer tanto o Git quanto o Bash no programa
-        Git Bash.</p>
+      <p>Isso irá prover o Git e o Bash no programa chamado Git Bash.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">Mac OS X</h4>
       <p>
-        O shell padrão em todas as versões do Mac OS X é o Bash, então
-        não é necessário fazer a instalação. Você acessa o Bash a partir
-        do Terminal (encontrado
-        em <code>/Applications/Utilities</code>). Veja
-        o <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video
-        tutorial</a> da instalação do Git para um exemplo de como abrir
-        o Terminal. Você pode manter o Terminal no seu dock para este
-        workshop.
+        O terminal padrão em todas as versões do Mac OS X é o Bash e portanto você
+        não precisa instalar nada. Você pode acessar o bash pelo Terminal
+        (encontrado em
+        <code>/Applications/Utilities</code>).
+        Veja o <a href="https://www.youtube.com/watch?v=9LQhwETCdwY">video tutorial</a> com a instalação do Git
+        para um exemplo de como abrir o Terminal.
+        Você provavelmente vai
+        querer manter o Terminal no dock da sua área de trabalho.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        O shell padrão geralmente é o Bash, mas se sua máquina possuir
-        uma configuração diferente, você pode rodá-lo abrindo um
-        terminal e digitando <code>bash</code>. Não há necessidade de
-        instalação.
+        O terminal padrão normalmente é <code>bash</code> e você não precisa
+        instalar nada.  Se sua máquina estiver configurada de maneira diferente
+        você pode abrir um terminal e digitar <code>bash</code>.
       </p>
     </div>
   </div>
@@ -491,48 +494,60 @@ Avisaremos no início da oficina o calendário final.
            is given at https://help.github.com/articles/supported-browsers/-->
   <h3>Git</h3>
   <p>
-    Git é um sistema de controle de versão que permite rastrear quem fez
-    modificações, aonde elas foram feitas e quando. Também possui opções
-    para facilmente compartilhar uma versão pública do seu código
-    no <a href="https://github.com/">github.com</a>. Você precisará de
-    um
-    browser <a href="https://help.github.com/articles/supported-browsers/">suportado</a>
-    (atualmente Chrome, Firefox ou Safari, ou Internet Explorer 9 ou
-    acima).
+    Git é um sistema de controle de versão
+    que permite você manter registro de quem faz uma alteração
+    em qual arquivo e quando
+    além de possuir opções para facilmente atualizar seu código
+    em <a href="https://github.com/">github.com</a>.
+    Você vai precisar de um navegador web
+    <a href="https://help.github.com/articles/supported-browsers/">suportado</a>
+    (versões atuais do Chrome, Firefox ou Safari,
+    ou Internet Explorer 9 ou superior).
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+    for keeping your email address private</a> provided at GitHub.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git deve estar instalado no seu computador como parte da
-        instalação do Bash (descrito acima).
+        Git deve estar instalado no seu computador como parte da instalação do
+        Bash (descrito acima).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">Mac OS X</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>Para OS X 10.9 e superior</strong>, instale Git para Mac
-        baixando e rodando a versão mais recente do instalador
-        "mavericks" a
-        partir <a href="http://sourceforge.net/projects/git-osx-installer/files/">desta
-        lista</a>. Após instalar o Git, não haverá nada no seu
-        folder <code>/Applications</code>, pois o Git é um programa de
-        linha de comando.
-        <strong>Para versões mais antigas do OS X (10.5-10.8)</strong>
-        use o instalador mais recente denominado "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">disponível aqui</a>.
+        <strong>Para OS X 10.9 e superior</strong>,
+        instale Git para Mac
+        baixando e executando a versão mais recente do instalador "mavericks"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">dessa lista</a>.
+        Depois de instalar Git, não existirá nenhum atalho no seu diretório <code>/Applications</code>
+        pois Git é um programa de linha de comando.
+      </p>
+      <p>
+        <strong>Para versões antigas do OS X (10.5-10.8)</strong>
+        utilize o instalador mais recente
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">disponível aqui</a>
+        que esteja marcado com "snow-leopard".
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        Se o Git ainda não estiver disponível em sua máquina, você pode
-        tentar instalar através do gerenciado de pacotes da sua
-        distribuição. Por exemplo, para Debian/Ubuntu rode <code>sudo
-        apt-get install git</code> e para Fedora rode <code>sudo yum
-        install git</code>.
+        Se Git ainda não encontra-se disponível na sua máquina você pode
+        instalá-lo via o gerenciador de pacotes da sua distribuição
+        Para Debian/Ubuntu execute
+        <code>sudo apt-get install git</code>
+        e para Fedora execute <code>sudo yum install git</code>.
       </p>
     </div>
   </div>
@@ -542,14 +557,13 @@ Avisaremos no início da oficina o calendário final.
   <h3>Editor de Texto</h3>
 
   <p>
-    Quando você está escrevendo código, é importante usar um editor de
-    texto que seja otimizado para escrever código, com características
-    como coloração automática de palavras-chave. O editor de texto
-    padrão no Mac OS X e Linux geralmente é o Vim, que não é famoso por
-    ser intuitivo. Se você acidentalmente se encontrar preso nele, tente
-    digitar a tecla Esc, seguido de <code>:q!</code> (dois pontos, 'q'
-    minusculo, ponto de exclamação), depois aperte Enter para retornar
-    ao Shell.
+    Quando você está escrevendo um código, é interessante ter um editor de
+    texto otimizado para a escrita de código, com funcionalidades como
+    utilização de cores para palavras chaves. O editor padrão no Mac OS X e
+    Linux é o Vim, que não é famoso por ser intuitivo.
+    Se você acidentalmente encontrar-se preso nele,
+    tente pressionar <code>ESC</code>, digitar <code>:q!</code> e pressionar <code>ENTER</code>
+    para retornar à linha de comando.
   </p>
 
   <div class="row">
@@ -612,10 +626,10 @@ Avisaremos no início da oficina o calendário final.
   <h3>R</h3>
 
   <p>
-    <a href="http://www.r-project.org">R</a> é uma linguagem de
-    programação que é especificamente poderosa para exploração de dados,
-    visualização, e análises estatísticas. Para interagir com o R nós
-    usamos o <a href="http://www.rstudio.com/">RStudio</a>.
+    <a href="http://www.r-project.org">R</a> é uma linguagem de programação
+    que é particularmente poderosa para exploração de dados, visualização, e
+    análises estatísticas. Para interagir com R, nós utilizaremos o
+    <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
@@ -623,38 +637,33 @@ Avisaremos no início da oficina o calendário final.
       <h4 id="r-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
       <p>
-        Instale o R baixando e executando
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este
-        arquivo .exe</a> do <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Também instale
-        a <a href="http://www.rstudio.com/ide/download/desktop">RStudio
-        IDE</a>.
+        Instale R baixando e rodando
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">este arquivo .exe</a>
+        disponível no <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Além disso, por favor instale o
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-macosx">Mac OS X</h4>
       <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
       <p>
-        Instale o R baixando e executando
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este
-        arquivo .pkg</a>
-        do <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Também instale
-        a <a href="http://www.rstudio.com/ide/download/desktop">RStudio
-        IDE</a>.
+        Instale o R baixando e rodando
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">este arquivo .pkg</a>
+        disponível no <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Além disso, por favor instale o
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="r-linux">Linux</h4>
       <p>
-        Você pode baixar os arquivos binários para a sua distribuição
-        do <a href="http://cran.r-project.org/index.html">CRAN</a>. Ou
-        você pode usar seu gerencidor de pacotes (e.g. para
-        Debian/Ubuntu rode <code>sudo apt-get install r-base</code> e
-        para Fedora rode
-        <code>sudo yum install R</code>).
-        Também instale
-        a <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        Você pode baixar os arquivos binários para sua distribuição particular
+        em <a href="http://cran.r-project.org/index.html">CRAN</a>. Ou
+        você pode utilizar seu "package manager" (e.g. para Debian/Ubuntu
+        rode <code>sudo apt-get install r-base</code> e para Fedora rode
+        <code>sudo yum install R</code>). Além disso, por favor instale o
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
   </div>
